@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lazy Load Enabled</title>
+<!--[if lt IE 9]>
+    <script src="html5shiv.js"></script>
+<![endif]-->
+
+</head>
+
+<body>	<div id="info"></div></body>
+<script src="jquery-1.11.0.min.js"></script>
+<script src="jquery.lazyload.js"></script>
+
+<script type="text/javascript" charset="utf-8">var arryImg = ["img/001-021-6002_6.jpg","img/001-021-6002_7.jpg","img/001-021-6002_8.jpg","img/001-021-6002_9.jpg","img/001-021-6002_10.jpg","img/001-021-6002_11.jpg","img/001-021-6002_12.jpg","img/001-021-6002_13.jpg","img/001-021-6002_14.jpg","img/001-021-6002_15.jpg","img/001-021-6002_16.jpg","img/001-021-6002_17.jpg","img/001-021-6002_18.jpg","img/001-021-6002_19.jpg","img/001-021-6002_20.jpg"];
+  $(function() {	for(var i=0,len=arryImg;i<len.length;i++){		var img = $("<img/>");		img.addClass("lazy");		img.css({width:"700px",height:"500px"});		img.attr({"data-original":len[i]});		$("#info").append(img);	}		
+      $("img.lazy").lazyload({effect: "fadeIn"});
+  });
+</script>
+
+
+
+</html>
